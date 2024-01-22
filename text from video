@@ -1,0 +1,10 @@
+import os 
+import speech_recognition as sr
+command2mp3 = "ffmpeg -i bolna.mp4 bolna.mp3"
+command2wav = "ffmpeg -i bolna.mp4 bolna.wav"
+os.system(command2mp3)
+os.system(command2wav)
+r= sr.Recognizer()
+audio = sr.AudioFlie('bolna.wav')
+audio = sr.record(source, duration=100)
+print(r.recognize_google(audio))
